@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div class="container">
+  <mat-card class="station-card"  *ngFor="let estacion of estaciones">
+      <mat-card-header>
+          <mat-card-title>Estacion: {{estacion.id}}</mat-card-title>
+          <mat-card-subtitle>Estado: {{estacion.state}}</mat-card-subtitle>
+      </mat-card-header>
+      <img matCardImage src="assets/antena.png">
+      <button class="boton-card" mat-raised-button color="primary"
+      (click)= "seeStation(estacion.id)">Ingresar</button>
+    </mat-card>
+</div>

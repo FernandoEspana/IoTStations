@@ -1,0 +1,25 @@
+.container {
+  margin-top: 15px;
+  margin-left: 15px;
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.boton-card {
+  width: 100%;
+  position: relative;
+  top:-150px;
+}
+.station-card {
+  background-color: lightblue;
+  color:#3f51b5;
+  border-style: double;
+  border-color: #3f51b5;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 150px;
+  height: 70%;
+
+}
+
