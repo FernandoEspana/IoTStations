@@ -1,7 +1,7 @@
 import { StationsService } from './../../../core/stations.service';
 import { Component, OnInit } from '@angular/core';
 import { StationI } from 'src/app/shared/models/StationI';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-stations',
@@ -11,7 +11,9 @@ import { Router } from '@angular/router';
 export class StationsComponent implements OnInit {
   estaciones: StationI[];
 
-  constructor(private stationsService: StationsService, private router: Router) { }
+  constructor(private stationsService: StationsService, private router: Router) {
+
+  }
 
   ngOnInit() {
     this.estaciones = this.stationsService.getStations();

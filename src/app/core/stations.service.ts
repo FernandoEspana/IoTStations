@@ -58,4 +58,13 @@ export class StationsService {
    getStations(): StationI[] {
      return this.estaciones;
    }
+
+   getStation(id: string) {
+     for (const estacion of this.estaciones) {
+       if (estacion.id === id) {
+         return estacion;
+       }
+     }
+     return null;
+   }
 }
