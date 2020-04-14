@@ -1,1 +1,38 @@
-<p>station works!</p>
+<div class="container">
+  <div class="title">
+    <h1>
+      <img src="assets/antena.png" width="30" height="30" alt="Img-antena" align="left">
+      Panel de instrumentos
+    </h1>
+
+  </div>
+
+  <mat-grid-list cols="2" gutterSize="10px" >
+    <mat-grid-tile>
+      <div class="tile-header">
+        <mat-grid-tile-header>MAPA</mat-grid-tile-header>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="tile-instruments">
+      <div class="tile-header">
+        <mat-grid-tile-header>INSTRUMENTOS</mat-grid-tile-header>
+      </div>
+      <div class="internalMatGrid">
+        <mat-grid-list cols="2" rowHeight="2:1" gutterSize="5px">
+          <mat-grid-tile>Temp: {{estacion.temp}} °C</mat-grid-tile>
+          <mat-grid-tile>Hum: {{estacion.hum}} %</mat-grid-tile>
+          <mat-grid-tile>Bat: {{estacion.bat}} %</mat-grid-tile>
+          <mat-grid-tile>Ping: {{estacion.ping}} ms</mat-grid-tile>
+          <mat-grid-tile>Potencia: {{estacion.pot}} dBm</mat-grid-tile>
+          <mat-grid-tile>Estado: {{estacion.state}}</mat-grid-tile>
+          <mat-grid-tile>TimeStamp</mat-grid-tile>
+          <mat-grid-tile>8</mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <div class="button-container">
+    <a class="button-back" mat-raised-button color="primary" routerLink="/stations" width="40%"> Volver</a>
+  </div>
+</div>
+
