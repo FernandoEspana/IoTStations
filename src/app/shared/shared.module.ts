@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from './../material.module';
@@ -17,7 +18,8 @@ import { CommonModule } from '@angular/common';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ]
 })
 export class SharedModule { }

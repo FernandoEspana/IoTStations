@@ -12,4 +12,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  loginModal() {
+    console.log('Aqui se abre el modal de login');
+  }
+
 }

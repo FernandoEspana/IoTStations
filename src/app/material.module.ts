@@ -19,7 +19,9 @@ const myModule = [
   MatToolbarModule,
   MatIconModule,
   MatListModule,
-  MatGridListModule
+  MatGridListModule,
+  MatToolbarModule,
+  MatIconModule
 ];
 @NgModule({
   declarations: [],
