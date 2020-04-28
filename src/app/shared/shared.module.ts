@@ -4,11 +4,14 @@ import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from './../material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LoginModalComponent } from './login-modal/login-modal.component';
+
 
 @NgModule({
   declarations: [
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginModalComponent
   ],
   exports: [
     FooterComponent,

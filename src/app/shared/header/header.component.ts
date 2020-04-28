@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { LoginModalComponent } from '../login-modal/login-modal.component';
 
 @Component({
   selector: 'app-header',
@@ -6,14 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  email: string;
 
-  constructor() { }
+
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
   loginModal() {
-    console.log('Aqui se abre el modal de login');
+    const dialogRef = this.dialog.open(LoginModalComponent, { data: {email: this.email}});
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+    });
   }
 
 }

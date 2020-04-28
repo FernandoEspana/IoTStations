@@ -15,6 +15,7 @@ mat-grid-tile{
 
 .title {
   display: inline-block;
+  width: 100%;
 }
 
 .img {
@@ -51,6 +52,13 @@ mat-grid-tile{
 .mat-grid-tile-header {
   background-color: #3f51b5 !important;
 }
+ #mapa-mapbox {
+   position: relative !important;
+   margin:0 !important;
+   width: 100% !important;
+   height: 100% !important;
+
+ }
 
 
 
