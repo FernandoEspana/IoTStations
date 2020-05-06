@@ -1,5 +1,6 @@
 export interface StationI {
-    id: string;
+    key?: string;
+    id: number;
     bat: number;
     hum: number;
     lat: number;

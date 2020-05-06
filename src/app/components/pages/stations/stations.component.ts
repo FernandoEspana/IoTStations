@@ -1,7 +1,8 @@
-import { StationsService } from './../../../core/stations.service';
+import { StationsService } from '../../../core/sevices/stations.service';
 import { Component, OnInit } from '@angular/core';
 import { StationI } from 'src/app/shared/models/StationI';
 import { Router, ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-stations',
@@ -16,13 +17,22 @@ export class StationsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.estaciones = this.stationsService.getStations();
+    this.getStationList();
+    }
+
+  getStationList() {
+    this.stationsService.getStationsList().snapshotChanges().pipe(
+      map( changes =>
+        changes.map( c =>
+          ({key: c.payload.key, ...c.payload.val()})
+          )
+         )
+     ).subscribe( stations => {
+       this.estaciones = stations;
+     });
+  }
+  seeStation(id: number) {
     console.log(this.estaciones);
-  }
-
-  seeStation(id: string) {
     this.router.navigate(['station', id]);
-
   }
-
 }
