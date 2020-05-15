@@ -11,7 +11,7 @@ import { LoginModalComponent } from './login-modal/login-modal.component';
   declarations: [
     FooterComponent,
     HeaderComponent,
-    LoginModalComponent
+    LoginModalComponent,
   ],
   exports: [
     FooterComponent,

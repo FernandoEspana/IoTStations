@@ -46,8 +46,8 @@ testem.log
 Thumbs.db
 
 #Environment files
-environment.ts
-environment.prod.ts
+src/environment.ts
+src/environment.prod.ts
 
 #Image files
 *.png
