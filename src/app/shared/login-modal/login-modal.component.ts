@@ -1,5 +1,6 @@
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Component, OnInit, Inject } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login-modal',
@@ -8,19 +9,27 @@ import { Component, OnInit, Inject } from '@angular/core';
 })
 export class LoginModalComponent implements OnInit {
 
+forma: FormGroup;
   constructor(public dialogRef: MatDialogRef<LoginModalComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: { email: string }) {
-                this.data.email = 'papagayoplus@gmail.com';
-              }
-
+              private fb: FormBuilder) {
+                this.crearFormulario();
+  }
   ngOnInit() {
   }
   logIn() {
    // this.dialogRef.componentInstance;
-    console.log();
+    console.log(this.forma);
+    this.dialogRef.close();
   }
   noCLick() {
     this.dialogRef.close();
+  }
+
+  crearFormulario() {
+    this.forma = this.fb.group({
+      email: ['',[Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'), Validators.required]],
+      clave: ['', [Validators.required, Validators.minLength(5)]]
+    });
   }
 
 }
