@@ -1,10 +1,11 @@
-<div class="container">
+<div class="container" >
   <mat-toolbar>
     <mat-icon class="antenna">settings_input_antenna</mat-icon><h1>IoT Stations</h1>
     <div class="buttons">
       <a mat-flat-button color="primary" routerLink="home"><mat-icon>home</mat-icon>Home</a>
-      <a mat-flat-button color="primary" routerLink="stations"><mat-icon>find_in_page</mat-icon>Estaciones</a>
+      <a *ngIf="loged" mat-flat-button color="primary" routerLink="stations"><mat-icon>find_in_page</mat-icon>Estaciones</a>
       <a mat-flat-button color="primary" (click)="loginModal()"><mat-icon>account_box</mat-icon>Login</a>
+      <a *ngIf="loged" mat-flat-button color="primary"><mat-icon>arrow_forward</mat-icon>Logout</a>
     </div>
   </mat-toolbar>
 </div>

@@ -1,0 +1,47 @@
+<div class="card-container" >
+    <form autocomplete="off" >
+      <mat-card class="login-card">
+        <mat-card-header>
+          <mat-card-title class="card-title">REGISTRO</mat-card-title>
+          <mat-card-subtitle class="card-subtitle">Ingresa tus datos de registro</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="row">
+            <div class="col-xs">
+              <mat-form-field>
+                <input
+                      formControlName="nombre"
+                       matInput type="text"
+                       placeholder="Nombre">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs">
+              <mat-form-field>
+                <input  formControlName="correo"
+                        matInput
+                        type="email"
+                        placeholder="Email">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs">
+              <mat-form-field>
+                <input formControlName="clave"
+                        matInput type="password"
+                        placeholder="password"
+                        autocomplete="new-password">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs">
+              <button mat-raised-button color="primary" type="submit">Registrarse</button>
+            </div>
+          </div>
+        </mat-card-content>
+       </mat-card>
+    </form>
+  </div>

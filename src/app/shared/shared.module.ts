@@ -4,7 +4,6 @@ import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from './../material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginModalComponent } from './login-modal/login-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -13,7 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     FooterComponent,
     HeaderComponent,
-    LoginModalComponent,
+
   ],
   exports: [
     FooterComponent,

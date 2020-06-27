@@ -1,0 +1,35 @@
+
+.card-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 3%;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  .login-card {
+    border-style: solid;
+    width: 300px;
+    height: 300px;
+    border-color: midnightblue;
+    border-radius: 7px;
+  }
+  mat-card-header {
+    display: flex;
+    justify-content: center;
+   }
+  mat-card-title  {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: large;
+   }
+   mat-form-field {
+     width: 100%;
+   }
+   button {
+      width: 100%;
+  
+   }

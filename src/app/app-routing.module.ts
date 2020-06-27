@@ -18,6 +18,10 @@ const routes: Routes = [
     loadChildren: () => import('./components/pages/stations/stations.module').then(m => m.StationsModule)
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./components/pages/auth/auth.module').then(m => m.AuthModule)
+  },
+  {
     path: 'station/:id', component: StationComponent
   }
 ];

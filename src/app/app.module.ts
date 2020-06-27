@@ -1,4 +1,3 @@
-import { LoginModalComponent } from './shared/login-modal/login-modal.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +8,7 @@ import { MaterialModule } from './material.module';
 import { SharedModule } from './shared/shared.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule} from '@angular/fire/auth';
 import { environment } from './../environments/environment';
 import { StationsService } from './core/sevices/stations.service';
 
@@ -19,7 +19,7 @@ import { StationsService } from './core/sevices/stations.service';
     StationComponent,
 
   ],
-  entryComponents: [LoginModalComponent],
+  entryComponents: [],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,7 +27,8 @@ import { StationsService } from './core/sevices/stations.service';
     MaterialModule,
     SharedModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [StationsService],
   bootstrap: [AppComponent]
