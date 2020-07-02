@@ -1,5 +1,5 @@
 <div class="card-container" >
-    <form>
+    <form autocomplete="off" [formGroup]="forma" (ngSubmit)="login()">
       <mat-card class="login-card">
         <mat-card-header>
           <mat-card-title class="card-title">LOGIN</mat-card-title>
@@ -9,20 +9,27 @@
           <div class="row">
             <div class="col-xs">
               <mat-form-field>
-                <input formControlName="email" matInput type="email" placeholder="Email">
+                <input  formControlName="email" 
+                        matInput type="email" 
+                        placeholder="Email">
               </mat-form-field>
             </div>
           </div>
           <div class="row">
             <div class="col-xs">
               <mat-form-field>
-                <input formControlName="password" matInput type="password" placeholder="password">
+                <input  formControlName="password" 
+                        matInput type="password" 
+                        placeholder="password">
               </mat-form-field>
             </div>
           </div>
           <div class="row">
             <div class="col-xs">
-              <button mat-raised-button color="primary" type="submit">Enviar Datos</button>
+              <button mat-raised-button color="primary" 
+                      type="submit"
+                      [disabled]="forma.invalid">Enviar Datos</button>
+              <button mat-stroked-button color="accent" (click)="cancel()">Cancelar</button>        
             </div>
           </div>
         </mat-card-content>

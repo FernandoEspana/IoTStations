@@ -12,7 +12,8 @@ import { map } from 'rxjs/operators';
 export class StationsComponent implements OnInit {
   estaciones: StationI[];
 
-  constructor(private stationsService: StationsService, private router: Router) {
+  constructor(private stationsService: StationsService, 
+              private router: Router) {
 
   }
 
@@ -34,5 +35,9 @@ export class StationsComponent implements OnInit {
   seeStation(id: number) {
     console.log(this.estaciones);
     this.router.navigate(['station', id]);
+  }
+
+  logout() {
+    this.router.navigate(['./home']);
   }
 }

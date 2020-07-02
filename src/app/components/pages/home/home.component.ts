@@ -7,7 +7,7 @@ import Swiper from 'swiper';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-
+  loged = false;
   images: string[] = [
     'assets/banner-1.png',
     'assets/banner-2.png'
