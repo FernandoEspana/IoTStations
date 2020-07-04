@@ -3,7 +3,6 @@
     width: 100%;
     height: 100%;
     padding-top: 3%;
-    background-color: lightblue;
     display: flex;
     justify-content: center;
   
@@ -14,23 +13,33 @@
     width: 300px;
     height: 300px;
     border-color: midnightblue;
+    background-color: lightblue;
     border-radius: 7px;
   }
+  
   mat-card-header {
     display: flex;
     justify-content: center;
    }
+
   mat-card-title  {
     display: flex;
     justify-content: center;
     margin-top: 50px;
     font-size: large;
    }
+
    mat-form-field {
      width: 100%;
    }
+
    button {
       width: 45%;
       margin: 5px;
            
    }
+
+   .linkRegistro {
+    padding-top: 9px;
+    text-align: center;
+  }

@@ -24,12 +24,18 @@
               </mat-form-field>
             </div>
           </div>
+          
           <div class="row">
             <div class="col-xs">
               <button mat-raised-button color="primary" 
                       type="submit"
                       [disabled]="forma.invalid">Enviar Datos</button>
               <button mat-stroked-button color="accent" (click)="cancel()">Cancelar</button>        
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs linkRegistro">
+                 <small>Aun no estás registrado? <a routerLink="../register">Registrarse</a></small>
             </div>
           </div>
         </mat-card-content>
