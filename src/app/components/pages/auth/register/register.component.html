@@ -1,5 +1,5 @@
 <div class="card-container" >
-    <form autocomplete="off" [formGroup]="forma" >
+    <form autocomplete="off" [formGroup]="forma" (ngSubmit)="register()" >
       <mat-card class="login-card">
         <mat-card-header>
           <mat-card-title class="card-title">REGISTRO</mat-card-title>
@@ -37,8 +37,14 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-xs">
-              <button mat-raised-button color="primary" type="submit">Registrarse</button>
+            <div class="col-xs botones">
+              <button mat-raised-button 
+                      color="primary" 
+                      type="submit"
+                      [disabled]="forma.invalid">
+                      Registrarse
+              </button>
+              <button mat-stroked-button color="accent" (click)="cancel()">Cancel</button>
             </div>
           </div>
         </mat-card-content>
