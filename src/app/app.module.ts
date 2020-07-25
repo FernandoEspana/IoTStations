@@ -17,6 +17,7 @@ import { StationsService } from './core/sevices/stations.service';
   declarations: [
     AppComponent,
     StationComponent,
+    
 
   ],
   entryComponents: [],

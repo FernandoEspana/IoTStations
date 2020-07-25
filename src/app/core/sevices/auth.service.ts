@@ -12,4 +12,16 @@ export class AuthService {
   login(email: string, password: string) {
     return this.afa.signInWithEmailAndPassword(email, password);
   }
+
+  register(email: string, passeword: string) {
+    return this.afa.createUserWithEmailAndPassword(email, passeword);
+  }
+
+  isLogged() {
+    return this.afa.authState
+  }
+
+  logout() {
+    return this.afa.signOut();
+  }
 }

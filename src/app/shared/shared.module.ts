@@ -8,15 +8,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
+
 @NgModule({
   declarations: [
     FooterComponent,
     HeaderComponent,
-
   ],
   exports: [
     FooterComponent,
-    HeaderComponent
+    HeaderComponent, 
+ 
   ],
   imports: [
     CommonModule,

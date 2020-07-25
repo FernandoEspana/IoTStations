@@ -1,8 +1,10 @@
 import { StationsService } from '../../../core/sevices/stations.service';
 import { Component, OnInit } from '@angular/core';
 import { StationI } from 'src/app/shared/models/StationI';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+
 import { map } from 'rxjs/operators';
+import { AuthService } from '../../../core/sevices/auth.service';
 
 @Component({
   selector: 'app-stations',
@@ -12,12 +14,14 @@ import { map } from 'rxjs/operators';
 export class StationsComponent implements OnInit {
   estaciones: StationI[];
 
-  constructor(private stationsService: StationsService, 
+  constructor(private stationsService: StationsService,
+              private aService: AuthService, 
               private router: Router) {
 
   }
 
   ngOnInit() {
+    
     this.getStationList();
     }
 
@@ -38,6 +42,11 @@ export class StationsComponent implements OnInit {
   }
 
   logout() {
-    this.router.navigate(['./home']);
+    this.aService.logout().
+      then( () => {
+        this.router.navigate(['./home'])
+      });
+    
   }
+
 }

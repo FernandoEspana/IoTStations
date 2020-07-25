@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import * as Mapboxgl from 'mapbox-gl';
 
+
 @Component({
   selector: 'app-station',
   templateUrl: './station.component.html',
@@ -21,21 +22,24 @@ export class StationComponent implements OnInit {
     ping: 33,
     pot: 0,
     state: false,
-    temp: 0
+    temp: 0,
+    time: 0
   };
   idStation: number;
   mapa: Mapboxgl.Map;
-
-  constructor(private activatedRoute: ActivatedRoute, private stationsService: StationsService) {
+    
+  constructor(private activatedRoute: ActivatedRoute, 
+              private stationsService: StationsService) {
     this.activatedRoute.params.subscribe( params => {
       this.idStation = params.id;
       this.getStationById(this.idStation);
     });
-   }
+    
+  }
 
   ngOnInit() {
-
-    // this.crearMarcador(this.getCoordsById(this.idStation)[0]);
+   
+   
   }
 
   crearMarcador(lon: number, lat: number) {

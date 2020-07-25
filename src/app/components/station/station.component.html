@@ -18,14 +18,15 @@
       </div>
       <div class="internalMatGrid">
         <mat-grid-list cols="2" rowHeight="2:1" gutterSize="5px">
-          <mat-grid-tile>Temp: {{estacion.temp}} °C</mat-grid-tile>
+          <mat-grid-tile>Temp: {{estacion.temp | number:'.0-2'}} °C</mat-grid-tile>
           <mat-grid-tile>Hum: {{estacion.hum}} %</mat-grid-tile>
           <mat-grid-tile>Bat: {{estacion.bat}} %</mat-grid-tile>
           <mat-grid-tile>Ping: {{estacion.ping}} ms</mat-grid-tile>
           <mat-grid-tile>Potencia: {{estacion.pot}} dBm</mat-grid-tile>
-          <mat-grid-tile>Estado: {{estacion.state}}</mat-grid-tile>
-          <mat-grid-tile>TimeStamp</mat-grid-tile>
-          <mat-grid-tile>8</mat-grid-tile>
+          <mat-grid-tile *ngIf="estacion.state">Conectado</mat-grid-tile>
+          <mat-grid-tile *ngIf="!estacion.state">Desconectado</mat-grid-tile>
+          <mat-grid-tile>{{estacion.time *1000 | date: 'short': 'GMT-0'}}</mat-grid-tile>
+          <!-- <mat-grid-tile></mat-grid-tile> -->
         </mat-grid-list>
       </div>
     </mat-grid-tile>

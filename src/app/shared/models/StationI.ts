@@ -9,4 +9,5 @@ export interface StationI {
     pot: number;
     state: boolean;
     temp: number;
+    time: number;
 }
