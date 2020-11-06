@@ -5,3 +5,13 @@ IoTSations is a fronted project that used Angular framework to see geolocation, 
 <p align="center">
   <img src="https://github.com/FernandoEspana/IoTStations/blob/master/IoT.gif?raw=true" alt="IoTStations image"/>
 </p>
+
+
+## 🚀 Installation
+1. Clone this project.
+2. Goto the project's folder
+`cd IoTStations`
+3. Install dependencies
+`npm install`
+4. Run in local host
+`ng serve -o`
