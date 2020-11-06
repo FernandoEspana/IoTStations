@@ -19,7 +19,7 @@ const routes: Routes = [
     loadChildren: () => import('./components/pages/auth/auth.module').then(m => m.AuthModule)
   },
   {
-    path: 'station/:id', component: StationComponent, canActivate:[ AuthGuard]
+    path: 'station/:id', component: StationComponent, canActivate:[ AuthGuard ]
   },
   {
     path: '**',
