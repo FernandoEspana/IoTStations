@@ -38,8 +38,7 @@ export class StationComponent implements OnInit {
   }
 
   ngOnInit() {
-   
-   
+  
   }
 
   crearMarcador(lon: number, lat: number) {
@@ -57,10 +56,10 @@ export class StationComponent implements OnInit {
           )
         )
     ).subscribe( stations => {
-       this.estacion = stations[id - 1];
-       this.drawMap();
-       this.crearMarcador(this.estacion.lon, this.estacion.lat);
-       console.log(this.estacion);
+      this.estacion = stations[id - 1];
+      this.drawMap();
+      this.crearMarcador(this.estacion.lon, this.estacion.lat);
+      console.log(this.estacion);
     });
   }
 
