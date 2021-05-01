@@ -1,4 +1,4 @@
-import { environment } from './../../../environments/environment';
+import { environment } from '../../../environments/environment';
 import { StationI } from './../../shared/models/StationI';
 import { StationsService } from '../../core/sevices/stations.service';
 import { ActivatedRoute } from '@angular/router';

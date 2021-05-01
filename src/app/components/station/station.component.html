@@ -25,7 +25,7 @@
           <mat-grid-tile>Potencia: {{estacion.pot}} dBm</mat-grid-tile>
           <mat-grid-tile *ngIf="estacion.state">Conectado</mat-grid-tile>
           <mat-grid-tile *ngIf="!estacion.state">Desconectado</mat-grid-tile>
-          <mat-grid-tile>{{estacion.time *1000 | date: 'short': 'GMT-0'}}</mat-grid-tile>
+          <mat-grid-tile>{{estacion.time * 1000 | date: 'short': 'GMT-0'}}</mat-grid-tile>
           <!-- <mat-grid-tile></mat-grid-tile> -->
         </mat-grid-list>
       </div>
